@@ -53,7 +53,7 @@ AccessModifierOffset:         -4
 AlignAfterOpenBracket:        Align
 AlignConsecutiveAssignments:  false
 AlignConsecutiveDeclarations: false
-Standard:                     c++23
+Standard:                     Latest
 
 SortIncludes:                 true
 IncludeBlocks:                Regroup
