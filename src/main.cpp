@@ -1,10 +1,11 @@
 #include <print>
 #include <spdlog/spdlog.h>
+
 #include "simulation.hpp"
 
-int main(int argc, char** argv) {
-
-    if(argc != 2) {
+int main(int argc, char** argv)
+{
+    if (argc != 2) {
         std::println("Usage: {} <length>", argv[0]);
         return 1;
     }

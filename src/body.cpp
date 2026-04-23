@@ -59,3 +59,10 @@ void Body::set_acceleration(glm::dvec2 acceleration) noexcept
 {
     this->acceleration = acceleration;
 }
+
+void Body::tick(double delta_time) noexcept {
+    this->velocity += this->acceleration * delta_time;
+    this->position += this->velocity * delta_time;
+
+    this->acceleration = {0.0, 0.0};
+}

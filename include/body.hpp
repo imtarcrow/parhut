@@ -25,4 +25,6 @@ public:
     void set_position(glm::dvec2 position) noexcept;
     void set_velocity(glm::dvec2 velocity) noexcept;
     void set_acceleration(glm::dvec2 acceleration) noexcept;
+
+    void tick(double delta_time) noexcept;
 };
