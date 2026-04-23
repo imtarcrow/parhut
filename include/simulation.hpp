@@ -1,13 +1,14 @@
 
 
-class Simulation {
+class Simulation
+{
 
-    private:
-        long tick_count = 0;
+private:
+    long tick_count = 0;
 
-    public:
-        void init();
+public:
+    void init();
 
-        void tick(double delta_time);
-        void run();
+    void tick(double delta_time);
+    void run();
 };
