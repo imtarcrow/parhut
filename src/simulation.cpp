@@ -1,18 +1,22 @@
 #include "simulation.hpp"
-#include <print>
+
+#include <spdlog/spdlog.h>
 #include <unistd.h>
 
-void Simulation::init() {
-    std::println("Initializing Simulation...");
+void Simulation::init()
+{
+    spdlog::info("Initializing Simulation...");
 }
 
-void Simulation::tick(double delta_time) {
-    std::println("{}. tick {}", this->tick_count, delta_time);
+void Simulation::tick(double delta_time)
+{
+    spdlog::info("{}. tick {}", this->tick_count, delta_time);
     this->tick_count++;
 }
 
-void Simulation::run() {
-    while(true) {
+void Simulation::run()
+{
+    while (true) {
         this->tick(0.02);
         usleep(20000);
     }
