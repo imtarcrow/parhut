@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Setup project files
 set(SOURCES 
     src/main.cpp
+    src/simulation.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
