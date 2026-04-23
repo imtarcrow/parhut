@@ -14,8 +14,14 @@ set(SOURCES
     src/simulation.cpp
 )
 
+
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE ./include)
+
+find_package(spdlog REQUIRED)
+find_package(glm REQUIRED)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE glm::glm spdlog::spdlog)
 
 # Disable C++ Compiler extensions 
 set_target_properties(${PROJECT_NAME} PROPERTIES
