@@ -1,8 +1,15 @@
 #include <print>
+#include <spdlog/spdlog.h>
 #include "simulation.hpp"
 
-int main() {
-    std::print("Starting...");
+int main(int argc, char** argv) {
+
+    if(argc != 2) {
+        std::println("Usage: {} <length>", argv[0]);
+        return 1;
+    }
+
+    spdlog::info("Starting...");
     auto* simulation = new Simulation();
 
     simulation->init();
@@ -10,6 +17,6 @@ int main() {
 
     delete simulation;
 
-    std::print("Exiting...");
+    spdlog::info("Exiting...");
     return 0;
 }
